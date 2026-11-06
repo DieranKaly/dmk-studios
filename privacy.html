@@ -38,10 +38,12 @@
         The desktop application can create or use local files, including story
         text and metadata, generated videos and audio, storyboard images,
         downloaded media and licence records, configuration settings, and
-        YouTube OAuth credentials. These are stored in the project’s local
-        folders or locations you configure, such as the output folder, the
-        local database, the `.env` settings file, and the YouTube token file.
-        The application does not send these files to DMK Studio.
+        YouTube and TikTok OAuth credentials. These are stored in the project’s
+        local folders or locations you configure, such as the output folder,
+        the local database, the `.env` settings file, and the YouTube and
+        TikTok token files. TikTok Client Key and Client Secret values are kept
+        in the local `.env` file. The application does not send these files to
+        DMK Studio.
       </p>
       <p>
         The application’s activity log is held in its running interface. The
@@ -62,7 +64,8 @@
         <li><strong>Media providers:</strong> Searches or downloads you initiate can send search terms or API requests to YouTube, Pexels, Pixabay, or Wikimedia Commons. API credentials you configure are used for their respective services.</li>
         <li><strong>Model and voice downloads:</strong> When you install models or voices, your computer downloads files from their configured provider, such as Hugging Face.</li>
         <li><strong>Local AI services:</strong> Story prompts and narration may be sent to the Ollama server address configured on your computer. By default this is a local server. If you configure a remote server, its operator may receive that information.</li>
-        <li><strong>Web links:</strong> Buttons for TikTok and Instagram open their official websites for manual upload. The app does not currently connect those accounts or send videos to TikTok or Instagram.</li>
+        <li><strong>TikTok:</strong> If you connect TikTok, TikTok Login Kit receives the authorization request for your basic profile and posting permission. When you review and confirm a direct post, TikTok receives the selected video file, caption, privacy choice, interaction settings, branded-content choices, and an AI-generated-content indicator. TikTok access and refresh tokens are stored locally. Posting requires TikTok to approve the app’s requested permissions; TikTok controls processing, moderation, and the final post.</li>
+        <li><strong>Instagram:</strong> The app opens Instagram’s official website for manual upload. It does not connect to your Instagram account or send videos to Instagram through an API.</li>
       </ul>
       <p>
         Auto run, if enabled, sends each generated video and its upload metadata
